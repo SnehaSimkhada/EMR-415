@@ -22,29 +22,5 @@
     "gender": "Female",
     "address": "2234 Dog Rd",
     "phone": "109-879-8849"
-  },
-  {
-    "id": 4,
-    "name": "Saun",
-    "age": "90",
-    "gender": "Male",
-    "address": "2234 Old Rd",
-    "phone": "109-224-9999"
-  },
-  {
-    "id": 5,
-    "name": "Harry",
-    "age": "88",
-    "gender": "Male",
-    "address": "2234 Late Rd",
-    "phone": "109-994-9999"
-  },
-  {
-    "id": 6,
-    "name": "Danny",
-    "age": "24",
-    "gender": "Male",
-    "address": "2234 Mad Rd",
-    "phone": "109-879-9999"
   }
 ]
