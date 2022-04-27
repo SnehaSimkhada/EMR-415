@@ -3,31 +3,16 @@ const bodyParser = require('body-parser')
 const path = require('path')
 const fs = require('fs');
 
-var user = [  
-  {
-  "id": 1,
-  "name": "Sneha",
-  "age": "20",
-  "gender": "Female",
-  "address": "5560 Rock Rd",
-  "phone": "109-650-8849"
-},
-{
-  "id": 2,
-  "name": "Sam",
-  "age": "28",
-  "gender": "Male",
-  "address": "5334 Hill Rd",
-  "phone": "546-650-8849"
-},
-{
-  "id": 3,
-  "name": "Sona",
-  "age": "17",
-  "gender": "Female",
-  "address": "2234 Dog Rd",
-  "phone": "109-879-8849"
-}]
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://sneha:Instragram1!@cluster0.wawja.mongodb.net/EMR?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+client.connect(err => {
+  const collection = client.db("EMR").collection("emrs");
+  // perform actions on the collection object
+  client.close();
+});
+
 const PORT = process.env.PORT || 5000
 const fileData = JSON.parse(fs.readFileSync('./user/emr.json'))
 
